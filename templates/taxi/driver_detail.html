@@ -24,6 +24,10 @@
     {% endfor %}
   </div>
 
+<h1>{{ driver.user.first_name }} {{ driver.user.last_name }}</h1>
+<p>Username: {{ driver.user.username }}</p>
+<p>Numer prawa jazdy: {{ driver.license_number }}</p>
+
 <a href="{% url 'driver-license-update' driver.id %}">
     <button>Aktualizuj Prawo Jazdy</button>
 </a>
