@@ -27,4 +27,9 @@
     {% else %}
       <p>There are no drivers in the service.</p>
     {% endif %}
+
+    <a href="{% url 'driver-create' %}">
+    <button>Dodaj Nowego Kierowcę</button>
+    </a>
+
 {% endblock %}

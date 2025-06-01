@@ -19,4 +19,13 @@
       <li>{{ driver.username }} ({{ driver.first_name }} {{ driver.last_name }})</li>
     {% endfor %}
   </ul>
+
+  <a href="{% url 'toggle-driver' car.id %}">
+    {% if user.driver in car.drivers.all %}
+        <button>Usuń mnie z tego samochodu</button>
+    {% else %}
+        <button>Przypisz mnie do tego samochodu</button>
+    {% endif %}
+  </a>
+
 {% endblock %}

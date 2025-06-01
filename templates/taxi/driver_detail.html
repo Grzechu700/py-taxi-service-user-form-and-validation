@@ -23,4 +23,12 @@
       <p>No cars!</p>
     {% endfor %}
   </div>
+
+<a href="{% url 'driver-license-update' driver.id %}">
+    <button>Aktualizuj Prawo Jazdy</button>
+</a>
+<a href="{% url 'driver-delete' driver.id %}">
+    <button>Usuń Kierowcę</button>
+</a>
+
 {% endblock %}
